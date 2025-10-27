@@ -14,6 +14,7 @@
 - (IBAction)addingLitersStepper:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *addedLitersLabel;
 - (IBAction)datePicker:(id)sender;
+- (IBAction)addLitersButton:(id)sender;
 
 @end
 
