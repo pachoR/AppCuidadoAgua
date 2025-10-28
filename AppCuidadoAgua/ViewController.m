@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "AAChartKit/AAChartKit.h"
 
 @interface ViewController ()
 
