@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Database/DatabaseManager.h"
 
 @interface ViewController : UIViewController
 
@@ -15,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *addedLitersLabel;
 - (IBAction)datePicker:(id)sender;
 - (IBAction)addLitersButton:(id)sender;
+
+- (void)realizarOperacionesBaseDeDatos;
+- (void)mostrarDatosBaseDeDatos;
 
 @end
 
