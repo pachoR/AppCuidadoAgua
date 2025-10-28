@@ -88,6 +88,25 @@
                                     <constraint firstItem="qso-TB-OqA" firstAttribute="top" secondItem="02H-MC-d6C" secondAttribute="bottom" constant="20" id="Mfc-Je-pg0"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brH-Dk-ps7">
+                                <rect key="frame" x="32" y="749.66666666666663" width="100" height="34.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="U5L-fE-h3Z"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Stats"/>
+                                <connections>
+                                    <segue destination="ulq-bX-MC0" kind="show" id="Aer-S0-osY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVD-PL-L2L">
+                                <rect key="frame" x="260" y="749.66666666666663" width="100" height="34.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="brJ-NI-e4p"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Stats"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.85318967889999997" green="1" blue="0.99355137159999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -95,8 +114,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Utu-Fg-PGd" secondAttribute="trailing" constant="32" id="7aM-y7-yU9"/>
                             <constraint firstItem="Utu-Fg-PGd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="8Ka-AB-hUp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gL9-AA-aOU" secondAttribute="trailing" constant="32" id="S6p-hz-jgU"/>
+                            <constraint firstItem="YVD-PL-L2L" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="T5R-2h-zzm"/>
                             <constraint firstItem="Utu-Fg-PGd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="bJX-JM-VV9"/>
                             <constraint firstItem="gL9-AA-aOU" firstAttribute="top" secondItem="Utu-Fg-PGd" secondAttribute="bottom" constant="200" id="csF-No-TwU"/>
+                            <constraint firstItem="brH-Dk-ps7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tEw-xT-ylH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YVD-PL-L2L" secondAttribute="trailing" constant="32" id="wnL-1e-awI"/>
+                            <constraint firstItem="brH-Dk-ps7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="z1t-TB-zwT"/>
                             <constraint firstItem="gL9-AA-aOU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="zQE-5u-fFu"/>
                         </constraints>
                     </view>
@@ -108,11 +131,55 @@
             </objects>
             <point key="canvasLocation" x="-48.091603053435115" y="3.5211267605633805"/>
         </scene>
+        <!--View Controller Stats-->
+        <scene sceneID="Goq-Ar-lJS">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerStats" id="ulq-bX-MC0" customClass="ViewControllerStats" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B00-iv-GpG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwC-4c-U9v">
+                                <rect key="frame" x="32" y="125" width="329" height="638"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TNn-up-RIG">
+                                <rect key="frame" x="90" y="69" width="213" height="32"/>
+                                <segments>
+                                    <segment title="Week"/>
+                                    <segment title="Month"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E5h-A1-DuI"/>
+                        <color key="backgroundColor" red="0.85318967889999997" green="1" blue="0.99355137159999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="jwC-4c-U9v" firstAttribute="top" secondItem="TNn-up-RIG" secondAttribute="bottom" constant="25" id="Alu-Md-u9h"/>
+                            <constraint firstItem="TNn-up-RIG" firstAttribute="top" secondItem="E5h-A1-DuI" secondAttribute="top" constant="10" id="Jpo-oz-lRQ"/>
+                            <constraint firstItem="TNn-up-RIG" firstAttribute="leading" secondItem="E5h-A1-DuI" secondAttribute="leading" constant="90" id="OWO-QZ-nYI"/>
+                            <constraint firstItem="E5h-A1-DuI" firstAttribute="trailing" secondItem="TNn-up-RIG" secondAttribute="trailing" constant="90" id="ZjD-r6-HUL"/>
+                            <constraint firstItem="E5h-A1-DuI" firstAttribute="bottom" secondItem="jwC-4c-U9v" secondAttribute="bottom" constant="20" id="ki9-hu-MyI"/>
+                            <constraint firstItem="jwC-4c-U9v" firstAttribute="leading" secondItem="E5h-A1-DuI" secondAttribute="leading" constant="32" id="ncc-XQ-RGp"/>
+                            <constraint firstItem="E5h-A1-DuI" firstAttribute="trailing" secondItem="jwC-4c-U9v" secondAttribute="trailing" constant="32" id="q3r-bW-JTF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kck-6w-wUF"/>
+                    <connections>
+                        <outlet property="chartContainerView" destination="jwC-4c-U9v" id="Maq-Jr-tYy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YzA-HF-qXs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1417.5572519083969" y="-390.14084507042253"/>
+        </scene>
     </scenes>
     <resources>
         <image name="exclamationmark.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
