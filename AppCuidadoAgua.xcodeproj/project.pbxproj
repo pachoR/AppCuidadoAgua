@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4A43764FD73DB38FB82916EA /* Pods_AppCuidadoAgua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31F87064C1DB252B665F46E7 /* Pods_AppCuidadoAgua.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		31F87064C1DB252B665F46E7 /* Pods_AppCuidadoAgua.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppCuidadoAgua.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CAD6F952CA5A1B2FE2DD483 /* Pods-AppCuidadoAgua.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCuidadoAgua.debug.xcconfig"; path = "Target Support Files/Pods-AppCuidadoAgua/Pods-AppCuidadoAgua.debug.xcconfig"; sourceTree = "<group>"; };
 		64BA7F952EB00C8A001A1896 /* AppCuidadoAgua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCuidadoAgua.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE688BEF313CC17530631E6A /* Pods-AppCuidadoAgua.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCuidadoAgua.release.xcconfig"; path = "Target Support Files/Pods-AppCuidadoAgua/Pods-AppCuidadoAgua.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A43764FD73DB38FB82916EA /* Pods_AppCuidadoAgua.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1679CA99FEF5DC0CFB8AE59C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31F87064C1DB252B665F46E7 /* Pods_AppCuidadoAgua.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		64BA7F8C2EB00C8A001A1896 = {
 			isa = PBXGroup;
 			children = (
 				64BA7F972EB00C8A001A1896 /* AppCuidadoAgua */,
 				64BA7F962EB00C8A001A1896 /* Products */,
+				97B29A74407B9DDB0FEE2DDD /* Pods */,
+				1679CA99FEF5DC0CFB8AE59C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +76,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		97B29A74407B9DDB0FEE2DDD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CAD6F952CA5A1B2FE2DD483 /* Pods-AppCuidadoAgua.debug.xcconfig */,
+				CE688BEF313CC17530631E6A /* Pods-AppCuidadoAgua.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +93,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64BA7FAD2EB00C8C001A1896 /* Build configuration list for PBXNativeTarget "AppCuidadoAgua" */;
 			buildPhases = (
+				823A24F39E0F8CA180CA1518 /* [CP] Check Pods Manifest.lock */,
 				64BA7F912EB00C8A001A1896 /* Sources */,
 				64BA7F922EB00C8A001A1896 /* Frameworks */,
 				64BA7F932EB00C8A001A1896 /* Resources */,
+				85A63CBEC727F9292E38C75B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +107,6 @@
 				64BA7F972EB00C8A001A1896 /* AppCuidadoAgua */,
 			);
 			name = AppCuidadoAgua;
-			packageProductDependencies = (
-			);
 			productName = AppCuidadoAgua;
 			productReference = 64BA7F952EB00C8A001A1896 /* AppCuidadoAgua.app */;
 			productType = "com.apple.product-type.application";
@@ -126,6 +154,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		823A24F39E0F8CA180CA1518 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppCuidadoAgua-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85A63CBEC727F9292E38C75B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppCuidadoAgua/Pods-AppCuidadoAgua-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppCuidadoAgua/Pods-AppCuidadoAgua-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppCuidadoAgua/Pods-AppCuidadoAgua-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		64BA7F912EB00C8A001A1896 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +209,7 @@
 /* Begin XCBuildConfiguration section */
 		64BA7FAE2EB00C8C001A1896 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CAD6F952CA5A1B2FE2DD483 /* Pods-AppCuidadoAgua.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -166,6 +237,7 @@
 		};
 		64BA7FAF2EB00C8C001A1896 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE688BEF313CC17530631E6A /* Pods-AppCuidadoAgua.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
